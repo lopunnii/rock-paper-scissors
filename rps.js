@@ -10,26 +10,28 @@ const options = [
       let result;
      switch (true){
          case playerSelection.toLowerCase() == computerSelection:
-              result = ("It's a tie!")
+              result = ("It's a tie!");
               break;
          case playerSelection.toLowerCase() == "rock" && computerSelection == "scissors":
-              result = ("You win! Rock beats Scissors!")
+              result = ("You win! Rock beats Scissors!");
               break;
          case playerSelection.toLowerCase() == "paper" && computerSelection == "rock":
-              result = ("You win! Paper beats Rock!")
+              result = ("You win! Paper beats Rock!");
               break;
          case playerSelection.toLowerCase() == "scissors" && computerSelection == "paper":
-              result = ("You win! Scissors beats Paper!")
+              result = ("You win! Scissors beats Paper!");
               break;
          case playerSelection.toLowerCase() == "rock" && computerSelection == "paper":
-              result = ("You lose! Paper beats Rock!")
+              result = ("You lose! Paper beats Rock!");
               break;
          case playerSelection.toLowerCase() == "paper" && computerSelection == "scissors":
-              result = ("You lose! Scissors beats Paper!")
+              result = ("You lose! Scissors beats Paper!");
               break;
          case playerSelection.toLowerCase() == "scissors" && computerSelection == "rock":
-              result = ("You lose! Rock beats Scissors!")
+              result = ("You lose! Rock beats Scissors!");
               break;
+         default: 
+              result = ("Please type either 'rock', 'paper' or 'scissors'");
      }
     return result;
  }
