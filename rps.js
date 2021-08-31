@@ -9,25 +9,25 @@ const options = [
  function playRound (playerSelection, computerSelection) {
       let result;
      switch (true){
-         case playerSelection == computerSelection:
+         case playerSelection.toLowerCase() == computerSelection:
               result = ("It's a tie!")
               break;
-         case playerSelection == "rock" && computerSelection == "scissors":
+         case playerSelection.toLowerCase() == "rock" && computerSelection == "scissors":
               result = ("You win! Rock beats Scissors!")
               break;
-         case playerSelection == "paper" && computerSelection == "rock":
+         case playerSelection.toLowerCase() == "paper" && computerSelection == "rock":
               result = ("You win! Paper beats Rock!")
               break;
-         case playerSelection == "scissors" && computerSelection == "paper":
+         case playerSelection.toLowerCase() == "scissors" && computerSelection == "paper":
               result = ("You win! Scissors beats Paper!")
               break;
-         case playerSelection == "rock" && computerSelection == "paper":
+         case playerSelection.toLowerCase() == "rock" && computerSelection == "paper":
               result = ("You lose! Paper beats Rock!")
               break;
-         case playerSelection == "paper" && computerSelection == "scissors":
+         case playerSelection.toLowerCase() == "paper" && computerSelection == "scissors":
               result = ("You lose! Scissors beats Paper!")
               break;
-         case playerSelection == "scissors" && computerSelection == "rock":
+         case playerSelection.toLowerCase() == "scissors" && computerSelection == "rock":
               result = ("You lose! Rock beats Scissors!")
               break;
      }
@@ -37,19 +37,19 @@ const options = [
 
 /*function playRound (playerSelection, computerSelection) {
      let result; 
-     if (playerSelection == computerSelection) {
+     if (playerSelection.toLowerCase() == computerSelection) {
           result = ("It's a tie!");
-} else if (playerSelection == "rock" && computerSelection == "scissors") {
+} else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
           result = ("You win! Rock beats Scissors!");
-} else if (playerSelection == "paper" && computerSelection == "rock") {
+} else if (playerSelection.toLowerCase() == "paper" && computerSelection == "rock") {
           result = ("You win! Paper beats Rock!");
-} else if (playerSelection == "scissors" && computerSelection == "paper") {
+} else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") {
           result = ("You win! Scissors beats Paper!");
-} else if (playerSelection == "rock" && computerSelection == "paper") {
+} else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
           result = ("You lose! Paper beats Rock!");
-} else if (playerSelection == "paper" && computerSelection == "scissors") {
+} else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
           result = ("You lose! Scissors beats Paper!");
-} else if (playerSelection == "scissors" && computerSelection == "rock") {
+} else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
            result = ("You lose! Rock beats Scissors!")
 } else {
           result = ("Please select rock, paper or scissors.");
