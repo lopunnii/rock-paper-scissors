@@ -1,10 +1,12 @@
-const options = [
-    "rock",
-    "paper",
-    "scissors"
-];
-
- const computerPlay = options[Math.floor(Math.random() * options.length)];
+function computerPlay () {
+      const options = [
+           "rock",
+           "paper",
+           "scissors"
+      ];
+      let computerPlayResult = options[Math.floor(Math.random() * options.length)]; 
+      return computerPlayResult; 
+ }
 
  function playRound (playerSelection, computerSelection) {
       let result;
@@ -36,8 +38,8 @@ const options = [
     return result;
  }
 
-
-/*function playRound (playerSelection, computerSelection) {
+/* If statement version: 
+function playRound (playerSelection, computerSelection) {
      let result; 
      if (playerSelection.toLowerCase() == computerSelection) {
           result = ("It's a tie!");
@@ -60,10 +62,13 @@ const options = [
 }
 */
  
+function game () {
+   
+}
+
  const playerSelection = "rock";
- const computerSelection = computerPlay; 
+ const computerSelection = computerPlay(); 
 
  console.log(computerSelection)
  console.log(playerSelection)
  console.log(playRound(playerSelection, computerSelection));
- 
