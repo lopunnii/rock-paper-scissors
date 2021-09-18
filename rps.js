@@ -9,7 +9,7 @@ function computerPlay () {
  }
 
  function playRound (playerSelection, computerSelection) {
-      let result;
+      let result ;
      switch (true){
          case playerSelection.toLowerCase() == computerSelection:
               result = ("It's a tie!");
@@ -61,14 +61,48 @@ function playRound (playerSelection, computerSelection) {
    return result; 
 }
 */
- 
-function game () {
-   
-}
 
- const playerSelection = "rock";
- const computerSelection = computerPlay(); 
+/*function game() {
+     playRound(playerSelection, computerSelection);
+ counter++;
+}
+*/
+  
+ playerSelection = "rock";
+ computerSelection = computerPlay(); 
 
  console.log(computerSelection)
  console.log(playerSelection)
  console.log(playRound(playerSelection, computerSelection));
+
+ computerSelection = computerPlay(); 
+ console.log(computerSelection)
+ console.log(playerSelection)
+ console.log(playRound(playerSelection, computerSelection));
+
+computerSelection = computerPlay(); 
+ console.log(computerSelection)
+ console.log(playerSelection)
+ console.log(playRound(playerSelection, computerSelection));
+
+ computerSelection = computerPlay(); 
+ console.log(computerSelection)
+ console.log(playerSelection)
+ console.log(playRound(playerSelection, computerSelection));
+
+ computerSelection = computerPlay(); 
+ console.log(computerSelection)
+ console.log(playerSelection)
+ console.log(playRound(playerSelection, computerSelection));
+
+ /*
+counter = 0;
+while (counter<5)
+{
+     computerSelection = computerPlay(); 
+     console.log(computerSelection)
+     console.log(playerSelection)
+     console.log(playRound(playerSelection, computerSelection));
+    counter ++;
+}
+*/ 
