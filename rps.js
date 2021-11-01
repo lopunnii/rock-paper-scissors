@@ -8,9 +8,11 @@ function computerPlay () {
       return computerPlayResult; 
  }
 
- computerSelection = computerPlay();
+ let computerSelection = computerPlay();
+ let playerSelection = "rock";
 
- playerSelection = "rock";
+ let playerScore = 0
+ let computerScore = 0
 
  function playRound (playerSelection, computerSelection) {
       console.log(playerSelection);
@@ -22,21 +24,27 @@ function computerPlay () {
               result = ("It's a tie!");
               break;
          case playerSelection.toLowerCase() == "rock" && computerSelection == "scissors":
+              playerScore ++ 
               result = ("You win! Rock beats Scissors!");
               break;
          case playerSelection.toLowerCase() == "paper" && computerSelection == "rock":
+              playerScore ++
               result = ("You win! Paper beats Rock!");
               break;
          case playerSelection.toLowerCase() == "scissors" && computerSelection == "paper":
+              playerScore ++
               result = ("You win! Scissors beats Paper!");
               break;
          case playerSelection.toLowerCase() == "rock" && computerSelection == "paper":
+              computerScore ++
               result = ("You lose! Paper beats Rock!");
               break;
          case playerSelection.toLowerCase() == "paper" && computerSelection == "scissors":
+              computerScore ++
               result = ("You lose! Scissors beats Paper!");
               break;
          case playerSelection.toLowerCase() == "scissors" && computerSelection == "rock":
+              computerScore ++
               result = ("You lose! Rock beats Scissors!");
               break;
          default: 
@@ -51,3 +59,5 @@ function computerPlay () {
  console.log(playRound(playerSelection, computerSelection));
  console.log(playRound(playerSelection, computerSelection));
 
+console.log(playerScore);
+console.log(computerScore);
