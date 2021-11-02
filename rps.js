@@ -61,3 +61,11 @@ function computerPlay () {
 
 console.log(playerScore);
 console.log(computerScore);
+
+if (playerScore > computerScore) {
+     console.log("Player wins!")
+} else if (computerScore > playerScore) {
+     console.log("Computer wins!")
+} else if (playerScore == computerScore) {
+     console.log("It's a tie!")
+}
