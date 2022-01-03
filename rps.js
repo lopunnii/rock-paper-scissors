@@ -14,8 +14,10 @@ let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
+
+
  function playRound (playerSelection, computerSelection) {
-      playerSelection = prompt("Rock, paper or scissors?");
+      //playerSelection = prompt("Rock, paper or scissors?");
       console.log(playerSelection);
       computerSelection = computerPlay();
       console.log(computerSelection);
@@ -54,7 +56,7 @@ let computerScore = 0;
     return result;
  }
 
-function game () {
+/*function game () {
      console.log(playRound(playerSelection, computerSelection));
      console.log(playRound(playerSelection, computerSelection));
      console.log(playRound(playerSelection, computerSelection));
@@ -71,4 +73,19 @@ function game () {
 }
 }
 
-game();
+game();*/
+
+const rockBtn = document.querySelector('#rockBtn');
+rockBtn.addEventListener('click', () => {
+  playRound("rock", computerSelection);
+});
+
+const paperBtn = document.querySelector('#paperBtn');
+paperBtn.addEventListener('click', () => {
+  playRound("paper", computerSelection);
+});
+
+const scissorsBtn = document.querySelector('#scissorsBtn');
+scissorsBtn.addEventListener('click', () => {
+  playRound("scissors", computerSelection);
+});
