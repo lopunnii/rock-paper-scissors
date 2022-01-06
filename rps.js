@@ -14,8 +14,6 @@ let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
-
-
  function playRound (playerSelection, computerSelection) {
       computerSelection = computerPlay();
       seeSelections(playerSelection, computerSelection);
@@ -51,8 +49,8 @@ let computerScore = 0;
          default: 
               result = ("Please select either 'rock', 'paper' or 'scissors'");
      }
-    return console.log(result);
-    
+    seeResults(result);
+    return result;
  }
 
 /*function game () {
@@ -79,6 +77,13 @@ function seeSelections (playerSelection, computerSelection) {
     const selections = document.createElement('div');
     selections.textContent = 'You: ' + playerSelection + ' ' + 'Computer: ' + computerSelection;
     viewSelections.appendChild(selections);
+}
+
+function seeResults (result) {
+     const viewSelections = document.querySelector('#results');
+     const scoreResults = document.createElement('div');
+     scoreResults.textContent = result; 
+     viewSelections.appendChild(scoreResults);
 }
 
 const rockBtn = document.querySelector('#rockBtn');
