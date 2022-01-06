@@ -17,11 +17,9 @@ let computerScore = 0;
 
 
  function playRound (playerSelection, computerSelection) {
-      //playerSelection = prompt("Rock, paper or scissors?");
-      console.log(playerSelection);
       computerSelection = computerPlay();
-      console.log(computerSelection);
-      let result ;
+      seeSelections(playerSelection, computerSelection);
+      let result;
      switch (true){
          case playerSelection.toLowerCase() == computerSelection:
               result = ("It's a tie!");
@@ -51,9 +49,10 @@ let computerScore = 0;
               result = ("You lose! Rock beats Scissors!");
               break;
          default: 
-              result = ("Please type either 'rock', 'paper' or 'scissors'");
+              result = ("Please select either 'rock', 'paper' or 'scissors'");
      }
-    return result;
+    return console.log(result);
+    
  }
 
 /*function game () {
@@ -75,6 +74,13 @@ let computerScore = 0;
 
 game();*/
 
+function seeSelections (playerSelection, computerSelection) {
+    const viewSelections = document.querySelector('#results');
+    const selections = document.createElement('div');
+    selections.textContent = 'You: ' + playerSelection + ' ' + 'Computer: ' + computerSelection;
+    viewSelections.appendChild(selections);
+}
+
 const rockBtn = document.querySelector('#rockBtn');
 rockBtn.addEventListener('click', () => {
   playRound("rock", computerSelection);
@@ -89,3 +95,4 @@ const scissorsBtn = document.querySelector('#scissorsBtn');
 scissorsBtn.addEventListener('click', () => {
   playRound("scissors", computerSelection);
 });
+
