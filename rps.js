@@ -50,33 +50,40 @@ let computerScore = 0;
               result = ("Please select either 'rock', 'paper' or 'scissors'");
      }
     seeResults(result);
+    seeScore(playerScore, computerScore);
+    if (playerScore == 5 || computerScore == 5){
+    resetGame(playerScore, computerScore);
+    playerScore = 0;
+    computerScore = 0;
+    }
     return result;
  }
 
-/*function game () {
-     console.log(playRound(playerSelection, computerSelection));
-     console.log(playRound(playerSelection, computerSelection));
-     console.log(playRound(playerSelection, computerSelection));
-     console.log(playRound(playerSelection, computerSelection));
-     console.log(playRound(playerSelection, computerSelection));
-     console.log(playerScore);
-     console.log(computerScore);
-     if (playerScore > computerScore) {
-     console.log("Player wins!");
-} else if (computerScore > playerScore) {
-     console.log("Computer wins!");
-} else if (playerScore == computerScore) {
-     console.log("It's a tie!");
+function resetGame (playerScore, computerScore) {
+     const viewSelections = document.querySelector('#results');
+     const matchEnd = document.createElement('div');
+     if (playerScore == 5) {
+     matchEnd.textContent = "Player wins the match!";
+     viewSelections.appendChild(matchEnd);
+     document.getElementById("#results").value = '';
+} else if (computerScore == 5) {
+     matchEnd.textContent = "Computer wins the match!";
+     viewSelections.appendChild(matchEnd);
+} 
 }
-}
-
-game();*/
 
 function seeSelections (playerSelection, computerSelection) {
     const viewSelections = document.querySelector('#results');
     const selections = document.createElement('div');
     selections.textContent = 'You: ' + playerSelection + ' ' + 'Computer: ' + computerSelection;
     viewSelections.appendChild(selections);
+}
+
+function seeScore (playerScore, computerScore) {
+     const viewSelections = document.querySelector('#results');
+     const score = document.createElement('div');
+     score.textContent = playerScore + ' - ' + computerScore;
+     viewSelections.appendChild(score);
 }
 
 function seeResults (result) {
