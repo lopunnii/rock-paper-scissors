@@ -1,8 +1,8 @@
 function computerPlay () {
       const options = [
-           "rock",
-           "paper",
-           "scissors"
+           "Rock",
+           "Paper",
+           "Scissors"
       ];
       let computerPlayResult = options[Math.floor(Math.random() * options.length)]; 
       return computerPlayResult; 
@@ -19,30 +19,30 @@ let computerScore = 0;
       seeSelections(playerSelection, computerSelection);
       let result;
      switch (true){
-         case playerSelection.toLowerCase() == computerSelection:
+         case playerSelection.toLowerCase() == computerSelection.toLowerCase():
               result = ("It's a tie!");
               break;
-         case playerSelection.toLowerCase() == "rock" && computerSelection == "scissors":
+         case playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissors":
               playerScore ++ 
               result = ("You win! Rock beats Scissors!");
               break;
-         case playerSelection.toLowerCase() == "paper" && computerSelection == "rock":
+         case playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock":
               playerScore ++
               result = ("You win! Paper beats Rock!");
               break;
-         case playerSelection.toLowerCase() == "scissors" && computerSelection == "paper":
+         case playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "paper":
               playerScore ++
               result = ("You win! Scissors beats Paper!");
               break;
-         case playerSelection.toLowerCase() == "rock" && computerSelection == "paper":
+         case playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "paper":
               computerScore ++
               result = ("You lose! Paper beats Rock!");
               break;
-         case playerSelection.toLowerCase() == "paper" && computerSelection == "scissors":
+         case playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "scissors":
               computerScore ++
               result = ("You lose! Scissors beats Paper!");
               break;
-         case playerSelection.toLowerCase() == "scissors" && computerSelection == "rock":
+         case playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "rock":
               computerScore ++
               result = ("You lose! Rock beats Scissors!");
               break;
@@ -65,7 +65,6 @@ function resetGame (playerScore, computerScore) {
      if (playerScore == 5) {
      matchEnd.textContent = "Player wins the match!";
      viewSelections.appendChild(matchEnd);
-     document.getElementById("#results").value = '';
 } else if (computerScore == 5) {
      matchEnd.textContent = "Computer wins the match!";
      viewSelections.appendChild(matchEnd);
@@ -95,16 +94,16 @@ function seeResults (result) {
 
 const rockBtn = document.querySelector('#rockBtn');
 rockBtn.addEventListener('click', () => {
-  playRound("rock", computerSelection);
+  playRound("Rock", computerSelection);
 });
 
 const paperBtn = document.querySelector('#paperBtn');
 paperBtn.addEventListener('click', () => {
-  playRound("paper", computerSelection);
+  playRound("Paper", computerSelection);
 });
 
 const scissorsBtn = document.querySelector('#scissorsBtn');
 scissorsBtn.addEventListener('click', () => {
-  playRound("scissors", computerSelection);
+  playRound("Scissors", computerSelection);
 });
 
