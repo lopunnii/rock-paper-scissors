@@ -50,11 +50,11 @@ let computerScore = 0;
               result = ("Please select either 'rock', 'paper' or 'scissors'");
      }
     seeScore(playerScore, computerScore);
-    seeResults(result);
+    seeResult(result);
     if (playerScore == 5 || computerScore == 5){
-    resetGame(playerScore, computerScore);
-    playerScore = 0;
-    computerScore = 0;
+      resetGame(playerScore, computerScore);
+      playerScore = 0;
+      computerScore = 0;
     }
     return result;
  }
@@ -71,6 +71,7 @@ function resetGame (playerScore, computerScore) {
 } 
 }
 
+//Results
 const results = document.querySelector('#results');
 const selections = document.createElement('p');
 selections.setAttribute('id', 'selections');
@@ -94,11 +95,12 @@ function seeScore (playerScore, computerScore) {
      score.textContent = playerScore + ' - ' + computerScore;
 }
 
-function seeResults (result) {
+function seeResult (result) {
      const results = document.querySelector('#roundResult');
      results.textContent = result; 
 }
 
+//Buttons
 const rockBtn = document.querySelector('#rockBtn');
 rockBtn.addEventListener('click', () => {
   playRound("Rock", computerSelection);
