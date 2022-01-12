@@ -49,8 +49,8 @@ let computerScore = 0;
          default: 
               result = ("Please select either 'rock', 'paper' or 'scissors'");
      }
-    seeResults(result);
     seeScore(playerScore, computerScore);
+    seeResults(result);
     if (playerScore == 5 || computerScore == 5){
     resetGame(playerScore, computerScore);
     playerScore = 0;
@@ -60,36 +60,43 @@ let computerScore = 0;
  }
 
 function resetGame (playerScore, computerScore) {
-     const viewSelections = document.querySelector('#results');
+     const results = document.querySelector('#results');
      const matchEnd = document.createElement('div');
      if (playerScore == 5) {
      matchEnd.textContent = "Player wins the match!";
-     viewSelections.appendChild(matchEnd);
+     results.appendChild(matchEnd);
 } else if (computerScore == 5) {
      matchEnd.textContent = "Computer wins the match!";
-     viewSelections.appendChild(matchEnd);
+     results.appendChild(matchEnd);
 } 
 }
 
+const results = document.querySelector('#results');
+const selections = document.createElement('p');
+selections.setAttribute('id', 'selections');
+results.appendChild(selections);
+
+const score = document.createElement('p');
+score.setAttribute('id', 'score');
+results.appendChild(score);
+
+const roundResult = document.createElement('p');
+roundResult.setAttribute('id', 'roundResult');
+results.appendChild(roundResult);
+
 function seeSelections (playerSelection, computerSelection) {
-    const viewSelections = document.querySelector('#results');
-    const selections = document.createElement('div');
+    const selections = document.querySelector('#selections');
     selections.textContent = 'You: ' + playerSelection + ' ' + 'Computer: ' + computerSelection;
-    viewSelections.appendChild(selections);
 }
 
 function seeScore (playerScore, computerScore) {
-     const viewSelections = document.querySelector('#results');
-     const score = document.createElement('div');
+     const results = document.querySelector('#score');
      score.textContent = playerScore + ' - ' + computerScore;
-     viewSelections.appendChild(score);
 }
 
 function seeResults (result) {
-     const viewSelections = document.querySelector('#results');
-     const scoreResults = document.createElement('div');
-     scoreResults.textContent = result; 
-     viewSelections.appendChild(scoreResults);
+     const results = document.querySelector('#roundResult');
+     results.textContent = result; 
 }
 
 const rockBtn = document.querySelector('#rockBtn');
