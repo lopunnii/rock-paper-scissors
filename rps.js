@@ -49,8 +49,8 @@ let computerScore = 0;
          default: 
               result = ("Please select either 'rock', 'paper' or 'scissors'");
      }
-    seeScore(playerScore, computerScore);
     seeResult(result);
+    seeScore(playerScore, computerScore);
     if (playerScore == 5 || computerScore == 5){
       resetGame(playerScore, computerScore);
       playerScore = 0;
@@ -79,13 +79,13 @@ const selections = document.createElement('p');
 selections.setAttribute('id', 'selections');
 results.appendChild(selections);
 
-const score = document.createElement('p');
-score.setAttribute('id', 'score');
-results.appendChild(score);
-
 const roundResult = document.createElement('p');
 roundResult.setAttribute('id', 'roundResult');
 results.appendChild(roundResult);
+
+const score = document.createElement('p');
+score.setAttribute('id', 'score');
+results.appendChild(score);
 
 function seeSelections (playerSelection, computerSelection) {
     const selections = document.querySelector('#selections');

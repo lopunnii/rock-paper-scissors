@@ -3,48 +3,48 @@
     text-align: center; 
 }
 
-  .buttons {
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     border: none;
-  }
+}
 
-  #rockBtn {
+#rockBtn {
     background: #fff;
     border-color: #fff;
     border-style: solid;
     cursor: pointer;
-   }
+}
   
-   #rockBtn:hover {
-    border: 3px solid orangered;
+#rockBtn:hover {
+    border: 2px solid darkgray;
     border-radius: 10px;
-  }
+}
 
   #paperBtn {
     background: #fff;
     border-color: #fff;
     border-style: solid;
     cursor: pointer;
-   }
+}
   
-   #paperBtn:hover {
-    border: 3px solid orangered;
+#paperBtn:hover {
+    border: 2px solid darkgray;
     border-radius: 10px;
-  }
+}
   
 
- #scissorsBtn {
+#scissorsBtn {
   background: #fff;
 	border-color: #fff;
 	border-style: solid;
   cursor: pointer;
- }
+}
 
- #scissorsBtn:hover {
-  border: 3px solid orangered;
+#scissorsBtn:hover {
+  border: 2px solid darkgray;
   border-radius: 10px;
 }
 
