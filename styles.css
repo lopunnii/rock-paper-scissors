@@ -7,5 +7,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 200px;
+    border: none;
   }
+
+  #rockBtn {
+    background: #fff;
+    border-color: #fff;
+    border-style: solid;
+    cursor: pointer;
+   }
+  
+   #rockBtn:hover {
+    border: 3px solid orangered;
+    border-radius: 10px;
+  }
+
+  #paperBtn {
+    background: #fff;
+    border-color: #fff;
+    border-style: solid;
+    cursor: pointer;
+   }
+  
+   #paperBtn:hover {
+    border: 3px solid orangered;
+    border-radius: 10px;
+  }
+  
+
+ #scissorsBtn {
+  background: #fff;
+	border-color: #fff;
+	border-style: solid;
+  cursor: pointer;
+ }
+
+ #scissorsBtn:hover {
+  border: 3px solid orangered;
+  border-radius: 10px;
+}
+

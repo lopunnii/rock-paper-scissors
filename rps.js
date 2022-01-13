@@ -64,9 +64,11 @@ function resetGame (playerScore, computerScore) {
      const matchEnd = document.createElement('div');
      if (playerScore == 5) {
      matchEnd.textContent = "Player wins the match!";
+     matchEnd.style.color = 'red';
      results.appendChild(matchEnd);
 } else if (computerScore == 5) {
      matchEnd.textContent = "Computer wins the match!";
+     matchEnd.style.color = 'green';
      results.appendChild(matchEnd);
 } 
 }
