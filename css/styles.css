@@ -1,0 +1,50 @@
+.text {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center; 
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: none;
+}
+
+#rock-btn {
+    background: #fff;
+    border-color: #fff;
+    border-style: solid;
+    cursor: pointer;
+}
+  
+#rock-btn:hover {
+    border: 2px solid darkgray;
+    border-radius: 10px;
+}
+
+#paper-btn {
+    background: #fff;
+    border-color: #fff;
+    border-style: solid;
+    cursor: pointer;
+}
+  
+#paper-btn:hover {
+    border: 2px solid darkgray;
+    border-radius: 10px;
+}
+  
+
+#scissors-btn {
+  background: #fff;
+	border-color: #fff;
+	border-style: solid;
+  cursor: pointer;
+}
+
+#scissors-btn:hover {
+  border: 2px solid darkgray;
+  border-radius: 10px;
+}
+
