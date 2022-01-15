@@ -103,17 +103,17 @@ function seeResult (result) {
 }
 
 //Buttons
-const rockBtn = document.querySelector('#rockBtn');
+const rockBtn = document.querySelector('#rock-btn');
 rockBtn.addEventListener('click', () => {
   playRound("Rock", computerSelection);
 });
 
-const paperBtn = document.querySelector('#paperBtn');
+const paperBtn = document.querySelector('#paper-btn');
 paperBtn.addEventListener('click', () => {
   playRound("Paper", computerSelection);
 });
 
-const scissorsBtn = document.querySelector('#scissorsBtn');
+const scissorsBtn = document.querySelector('#scissors-btn');
 scissorsBtn.addEventListener('click', () => {
   playRound("Scissors", computerSelection);
 });
